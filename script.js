@@ -63,14 +63,7 @@ bbtn.addEventListener("click", ()=>{
 const imagePaths = [
   "img/1-10/img1.png",
   "img/1-10/img2.png",
-  "img/1-10/img1.png",
-  "img/1-10/img2.png",
-  "img/1-10/img1.png",
-  "img/1-10/img2.png",
-  "img/1-10/img1.png",
-  "img/1-10/img2.png",
-  "img/1-10/img1.png",
-  "img/1-10/img2.png",
+
   // يمكنك إضافة المزيد من المسارات هنا
 ];
 
