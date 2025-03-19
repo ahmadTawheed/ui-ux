@@ -1,0 +1,286 @@
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    font-family: "Cairo", sans-serif;
+    font-optical-sizing: auto;
+    background: rgb(36,14,0);
+background: linear-gradient(90deg, rgba(36,14,0,1) 0%, rgba(143,27,14,1) 47%, rgba(255,64,0,1) 100%);
+color: #fff;
+}
+
+header {
+    color: #fff;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style: none;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.home-content {
+    text-align: center;
+}
+
+.profile-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+.social-links img {
+    width: 30px;
+    height: 30px;
+    margin: 10px 10px;
+}
+
+.gallery {
+    padding: 50px 0;
+    text-align: center;
+}
+
+.gallery-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.gallery-item {
+    border-radius: 20px;
+    width: 400px;
+    height: 500px;
+    margin: 20px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1);
+}
+
+/* ... باقي أنماط CSS ... */
+
+
+
+
+/*footer*/
+
+/* ... باقي أنماط CSS ... */
+
+footer {
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.footer-links {
+    margin-top: 10px;
+}
+
+.footer-links a {
+    margin: 0 10px;
+}
+
+.footer-links img {
+    width: 30px;
+    height: 30px;
+}
+
+/* تصميم متجاوب للتذييل */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column; /* تغيير اتجاه العناصر إلى عمودي على الهواتف */
+    }
+
+    .footer-links {
+        margin-top: 20px; /* زيادة المساحة بين النص والروابط */
+    }
+}
+
+
+/*responsive*/
+
+/* ... باقي أنماط CSS ... */
+
+/* للأجهزة اللوحية والشاشات الأكبر */
+@media (max-width: 1024px) {
+    .home {
+        flex-direction: column; /* تغيير اتجاه العناصر في قسم الرئيسية إلى عمودي */
+        height: auto; /* ضبط الارتفاع التلقائي */
+        padding: 50px 0; /* إضافة بعض المساحة الداخلية */
+    }
+
+    .profile-image {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+/* للهواتف الذكية */
+@media (max-width: 768px) {
+    .gallery-item {
+        width: 100%; /* جعل عناصر المعرض تأخذ عرض الشاشة بالكامل */
+    }
+
+    .nav ul li {
+      display:block;
+      margin: 10px;
+    }
+
+    .home-content{
+        width: 100%;
+    }
+}
+
+
+/*button*/
+#scrollToTopBtn {
+    transition: linear 0.5s;
+    position: fixed; /* تثبيت الزر في مكانه */
+    bottom: 20px;
+    right: 30px;
+    z-index: 99; /* التأكد من ظهوره فوق العناصر الأخرى */
+    font-size: 15px;
+    border: none;
+    outline: none;
+    background-color: red;
+    color: white;
+    padding: 15px;
+    border-radius: 2%;
+    cursor: pointer;
+
+
+
+  }
+  
+  #scrollToTopBtn:hover {
+    background-color: #555; 
+
+  }
+
+
+
+  /*slider*/
+
+  .gallerysec {
+    text-align: center;
+}
+
+.gallery {
+    width: 95%;
+    max-width: 1200px;
+    display: flex;
+    overflow-x: auto;
+    margin: 0 auto;
+}
+
+.gallery div {
+    display: flex; /* استخدام flexbox لترتيب الصور أفقياً */
+    flex-wrap: nowrap; /* منع الصور من النزول تحت بعضها */
+    gap: 20px;
+    padding: 10px;
+}
+
+.gallery div img {
+    width: 300px; /* تحديد عرض ثابت للصورة أو يمكنك استخدام نسبة مئوية مثل 25% */
+    height: auto;
+    filter: grayscale(100%);
+    transition: transform 0.3s;
+    object-fit: cover;
+    border-radius: 10%;
+}
+
+.gallery::-webkit-scrollbar {
+    display: none;
+}
+
+.gallery-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    margin: 10% auto;
+}
+
+.gallery-wrap img {
+    width: 100px;
+    cursor: pointer;
+    margin: 30px;
+}
+
+.gallery div img:hover {
+    filter: grayscale(0);
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+/* Media Queries للتجاوب مع الشاشات المختلفة */
+@media (max-width: 768px) {
+    .gallery div img {
+        width: 200px; /* تعديل عرض الصور على الشاشات الصغيرة */
+    }
+
+    
+.gallery-wrap img {
+    width: 40px;
+    cursor: pointer;
+    margin: 10px;
+}
+}
+
+@media (max-width: 480px) {
+    .gallery div img {
+        width: 150px; /* تعديل عرض الصور على الشاشات الصغيرة جداً */
+    }
+
+    
+.gallery-wrap img {
+    width: 30px;
+    cursor: pointer;
+    margin: 10px;
+}
+}
